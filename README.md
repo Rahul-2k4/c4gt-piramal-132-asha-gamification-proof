@@ -1,37 +1,31 @@
 # Piramal #132 - ASHA Gamification
 
-**C4GT 2026 Proof Repository**
-
-## Issue
-https://github.com/PSMRI/AMRIT/issues/132
+C4GT 2026 reviewer proof packet.
 
 ## What This Proof Shows
 
-**Proof type:** JVM rule-engine spike + TypeScript idempotency spike + Lo-fi Figma prototype + FLW integration note.
+- offline-first gamification architecture for FLW Mobile App
+- Kotlin/JVM rule-engine proof with duplicate-event, daily-cap, offline-sync, and stable-reward checks
+- TypeScript rule spike plus FLW integration note
+- architecture and progress-widget screenshots
 
-- JVM rule engine validates event identity, daily caps, duplicate prevention, and milestone thresholds — proving local rule evaluation works before FLW integration
-- TypeScript spike proves sync-safe event IDs prevent duplicate rewards after retry — the highest-risk sync behavior, verified without touching FLW codebase
-- Lo-fi Figma prototype demonstrates the gamification module UI concept for ASHA workers
-- FLW integration note maps gamification trigger events to FLW source surfaces with clear non-changes to clinical logic
+## What This Proof Does Not Claim
 
-## What's Not Proven
+- no full Android app build
+- no upstream PR
+- no production or real health data
 
-- No upstream FLW code merged
-- No full Android app build
-- No backend sync contract confirmed
-- No production deployment
-- No mentor approval
+## Files To Inspect
 
-## Claim Boundary
+- `proof_packet/android-native-proof/`
+- `proof_packet/gamification-spike-ts/`
+- `proof_packet/screenshots/`
+- `proof_packet/README.md`
 
-JVM/TS/source integration proof only. Full Android app build is NOT claimed yet.
+## Next Upgrade
 
-## Files
+Configure Android SDK and compile a tiny Android-native integration slice around the event/rule boundary.
 
-- `MIFI_PROTOTYPE/` — Interactive Figma prototype
-- `proof_packet/` — JVM rule-engine tests, TypeScript spike, FLW integration note, screenshots
-- `screenshots/` — Visual evidence
+## Boundary
 
----
-
-*This is a proof-of-concept for C4GT 2026 application. Not for production use.*
+This repo is application proof, not production code. Claims are limited to the artifacts listed above.

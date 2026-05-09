@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+  :root{color-scheme:light;--bg:#f6f7fb;--panel:#fff;--ink:#111827;--muted:#5b6472;--line:#dbe2ec;--blue:#2563eb;--green:#0f7a4f;--amber:#9a6700;--red:#b42318}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  .shot{width:1440px;height:900px;padding:34px;background:linear-gradient(180deg,#f8fafc,#eef2f7)}
+  .top{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}
+  h1{font-size:32px;line-height:1.12;margin:0 0 6px;font-weight:780;letter-spacing:0}.sub{font-size:17px;color:var(--muted);max-width:980px}
+  .pill{display:inline-flex;align-items:center;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;white-space:nowrap}
+  .grid{display:grid;gap:16px}.cols2{grid-template-columns:1fr 1fr}.cols3{grid-template-columns:repeat(3,1fr)}.cols4{grid-template-columns:repeat(4,1fr)}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 16px 45px rgba(15,23,42,.08)}
+  .panel h2,.panel h3{margin:0 0 12px}.muted{color:var(--muted)}.small{font-size:13px}.metric{font-size:30px;font-weight:800;margin-top:4px}.label{font-size:12px;text-transform:uppercase;font-weight:800;color:#64748b}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}th,td{padding:11px 12px;border-bottom:1px solid #e5eaf2;text-align:left;vertical-align:top}th{background:#0f172a;color:#fff;font-size:12px;text-transform:uppercase}tr:last-child td{border-bottom:0}
+  .ok{color:var(--green);font-weight:800}.warn{color:var(--amber);font-weight:800}.bad{color:var(--red);font-weight:800}
+  .notice{background:#fff7e6;border:1px solid #f5c66d;color:#6b4300;border-radius:10px;padding:12px 14px;font-weight:650}
+  pre{margin:0;background:#0f172a;color:#e5eefb;border-radius:10px;padding:16px;font:14px/1.45 SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap}
+</style></head><body><main class="shot"><div class="top"><div><h1>Piramal #132 Prototype - Offline ASHA Gamification</h1><div class="sub">Mobile-framed non-punitive progress flow: local event, rule result, sync pending, no leaderboard.</div></div><div class="pill">PROTOTYPE MOBILE</div></div><div class="grid cols2">
+        <section class="panel" style="display:flex;justify-content:center"><div style="width:360px;height:660px;background:#fff;border:1px solid #cbd5e1;border-radius:34px;padding:22px;box-shadow:0 14px 40px rgba(15,23,42,.16)"><div class="label">Offline mode</div><h2 style="font-size:28px">Today progress</h2><p class="muted">Saved locally. Sync pending.</p><div style="width:170px;height:170px;border-radius:50%;border:18px solid #22c55e;display:flex;align-items:center;justify-content:center;margin:28px auto;font-size:34px;font-weight:850">72%</div><div class="panel" style="box-shadow:none;margin-bottom:10px;background:#ecfdf5">ANC visit saved <span class="ok">+10</span></div><div class="panel" style="box-shadow:none;margin-bottom:10px;background:#ecfdf5">Immunization saved <span class="ok">+10</span></div><div class="panel" style="box-shadow:none;background:#f8fafc">NCD screening pending</div><p class="small muted" style="margin-top:16px">Personal progress only. No public ranking.</p></div></section>
+        <section class="panel"><h2>Local Event Trace</h2><pre>eventId: asha-2026-05-07-anc-042
+trigger: ANC_VISIT_SAVED
+storage: Room local DB
+rule: daily cap + duplicate guard
+reward: 10 points
+sync: queued by WorkManager
+network: offline
+leaderboard: disabled</pre><div class="notice" style="margin-top:16px">Matches proof tests: idempotency and daily cap remain the acceptance boundary.</div></section>
+      </div></main></body></html>

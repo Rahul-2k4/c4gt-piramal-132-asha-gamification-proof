@@ -1,0 +1,29 @@
+{
+  "proofType": "Android-native Kotlin proof slice",
+  "issue": "Piramal #132",
+  "integratedIntoFlwApp": false,
+  "androidSdkBlocked": true,
+  "results": [
+    {
+      "name": "GamificationEvent data model",
+      "pass": true
+    },
+    {
+      "name": "RewardState data model",
+      "pass": true
+    },
+    {
+      "name": "duplicate prevention",
+      "pass": true
+    },
+    {
+      "name": "daily cap constant",
+      "pass": true
+    },
+    {
+      "name": "pending sync status",
+      "pass": true
+    }
+  ],
+  "pass": true
+}
